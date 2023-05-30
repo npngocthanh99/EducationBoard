@@ -1,19 +1,15 @@
 package com.thanhnpn99;
 
-import java.util.List;
-
-import com.thanhnpn99.model.Student;
 import com.thanhnpn99.service.StudentService;
-import com.thanhnpn99.service.StudentServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class EducationApp {
 
 	public static void main(String[] args) {
-		StudentService studentService = new StudentServiceImpl();
-		List<Student> studentList = studentService.getAllStudent();
-		System.out.println(studentList.size());
-		Student student = studentList.get(0);
-		System.out.println(student);
+		ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
+		StudentService service = context.getBean("studentService", StudentService.class);
+		System.out.println(service.getAllStudent());
 	}
 
 }
