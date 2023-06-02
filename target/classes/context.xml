@@ -5,7 +5,7 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean name="studentRepositoty" class="com.thanhnpn99.repository.StudentRepositoryImpl"/>
 
-    <bean name="studentService" class="com.thanhnpn99.service.StudentServiceImpl" autowire="default">
+    <bean name="studentService" class="com.thanhnpn99.service.StudentServiceImpl" autowire="constructor">
 <!--        <property name="studentRepository" ref="studentRepositoty"></property>-->
 <!--         <constructor-arg name="studentRepository" ref="studentRepositoty"></constructor-arg>-->
     </bean>
