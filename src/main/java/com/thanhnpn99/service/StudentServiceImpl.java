@@ -7,9 +7,10 @@ import com.thanhnpn99.repository.StudentRepository;
 import com.thanhnpn99.repository.StudentRepositoryImpl;
 
 public class StudentServiceImpl implements StudentService {
-	private StudentRepository studentRepository;
+	private StudentRepository studentRepository = new StudentRepositoryImpl();
 
 	public StudentServiceImpl() {
+		System.out.println("Default Constructor Injected");
 	}
 
 	public StudentServiceImpl(StudentRepository studentRepository) {
