@@ -8,7 +8,7 @@ import com.thanhnpn99.model.Student;
 public class StudentRepositoryImpl implements StudentRepository{
 	public List<Student> getAllStudent(){
 		List<Student> studentList = new ArrayList<Student>();
-		studentList.add(new Student("Thanh", "Ha Noi"));
+		studentList.add(new Student("Thanh", "Quang Binh"));
 		return studentList;
 	}
 }

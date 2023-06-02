@@ -3,5 +3,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean name="studentService" class="com.thanhnpn99.service.StudentServiceImpl"/>
+    <bean name="studentRepositoty" class="com.thanhnpn99.repository.StudentRepositoryImpl"/>
+
+    <bean name="studentService" class="com.thanhnpn99.service.StudentServiceImpl">
+        <property name="studentRepository" ref="studentRepositoty"></property>
+    </bean>
 </beans>
