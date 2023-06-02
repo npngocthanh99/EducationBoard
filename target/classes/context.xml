@@ -6,6 +6,7 @@
     <bean name="studentRepositoty" class="com.thanhnpn99.repository.StudentRepositoryImpl"/>
 
     <bean name="studentService" class="com.thanhnpn99.service.StudentServiceImpl">
-        <property name="studentRepository" ref="studentRepositoty"></property>
+<!--        <property name="studentRepository" ref="studentRepositoty"></property>-->
+         <constructor-arg name="studentRepository" ref="studentRepositoty"></constructor-arg>
     </bean>
 </beans>

@@ -9,6 +9,14 @@ import com.thanhnpn99.repository.StudentRepositoryImpl;
 public class StudentServiceImpl implements StudentService {
 	private StudentRepository studentRepository;
 
+	public StudentServiceImpl() {
+	}
+
+	public StudentServiceImpl(StudentRepository studentRepository) {
+		System.out.println("Contructor Injection");
+		this.studentRepository = studentRepository;
+	}
+
 	public StudentRepository getStudentRepository() {
 		return studentRepository;
 	}
